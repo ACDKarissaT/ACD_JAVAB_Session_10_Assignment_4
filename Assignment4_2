@@ -1,0 +1,17 @@
+2) 
+Group by clause aggregates identical data. The statement below shows the number
+of people in a city in customer table using group by.
+
+	SELECT city, count(city)  FROM customer GROUP BY city;
+    
+Having clause specifies search conditions for aggregates. With out aggregates,
+it's like the where clause. The statement below shows the cities in customer
+that have 2 people living in it using the having clause.
+
+	SELECT city FROM customer GROUP BY city HAVING count(city) =2;
+    
+Order by clause orders the rows in ascending or descending order. The statement
+below orders customer table by address in descending order.
+
+	SELECT * FROM customer ORDER BY address DESC;
+    
